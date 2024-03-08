@@ -1,0 +1,22 @@
+
+<script type="text/JavaScript">
+ class Person
+{
+    constructor(n, a, c) {
+    this.name = n;
+    this.age = a;
+    this.country = c;
+  }
+  getDetails(){
+    console.log(`Name is ${this.name}`);
+    console.log(`Age is ${this.age}`);
+    console.log(`Country is ${this.country}`);
+  }
+}
+
+let person1 = new Person( "xyz", 25 , "USA");
+let person2 = new Person( "pqr", 20 , "IND");
+
+person1.getDetails();
+person2.getDetails();
+</script>

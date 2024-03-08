@@ -1,0 +1,41 @@
+
+
+<script type="text/javascript">
+
+    class BankAccount{
+        constructor(AcNum, balance){
+            this.AcNum = AcNum;
+            this.balance = balance;
+        }
+        deposite(amount){
+            this.balance += amount;
+            console.log(`Amount deposited :- ${amount} Balance :- ${this.balance} `)
+        }
+        withdraw(amount){
+            if(this.balance >= amount){
+                this.balance -= amount;
+                console.log(`Amount withdrawn :- ${amount} Balance :- ${this.balance} `)
+            }else{
+                console.log(`INSUFFICIENT FUNDS FOR ${amount} Balance :- ${this.balance} `)
+            }
+        }
+        displayAc(){
+            console.log(`Account Number :- ${this.AcNum}`);
+            console.log(`Balance :- ${this.balance}`);
+
+        }
+    }
+    //ac-1 withdraws from funds availabe
+    let ac1 = new BankAccount(121212,100);
+    ac1.displayAc();
+    ac1.deposite(1500);
+    ac1.withdraw(400);
+
+    //ac-2 amount to withdraw exceds the amount availabe in account
+    let ac2 = new BankAccount(151515,100);
+    ac2.displayAc();
+    ac2.deposite(1500);
+    ac2.withdraw(4000);
+    
+
+</script>
